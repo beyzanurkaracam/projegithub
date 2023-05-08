@@ -1,0 +1,148 @@
+body{
+    background-color:rgb(253, 247, 237)!important;
+}
+.container a{
+    text-decoration: none;
+    color: black;
+}
+
+/*navbar kısmı*/
+.ust-navbar {
+    background-color: rgb(47, 72, 59);
+    width: 100%;
+    height: 70px;
+    margin-top: 0;
+    position: relative;
+
+}
+.navbarr .logo img{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 7%;
+    top: 5px;
+    border-radius: 50%;
+   border: 5px solid rgb(253, 247, 237);
+  
+    
+   
+}
+.dropdown li a{
+    color: black;
+}
+.navbarr .logo img:hover{
+    transition: transform 1s;
+    transform: scale(.5);
+    border: 5px solid rgb(152, 172, 161);
+}
+
+
+.ust-navbar a {
+    color: rgb(253, 247, 237) ;
+}
+
+.ust-navbar a:hover {
+    color:  rgb(152, 172, 161);
+}
+
+/*hobilerim kısmı*/
+.hakkimda-icerik {
+    position: relative;
+    top: -10;
+}
+
+.card{
+    box-shadow:5px 10px #909091;
+}
+.card:hover{
+    transition: transform 1s;
+    transform: scale(1.2);
+}
+
+.ayrac{
+    border: none;
+    border-top: 3px solid rgb(51, 36, 7);
+    max-width: 250px;
+    margin: 25px auto;
+}
+.igri{
+    color: rgb(80, 56, 23);
+    position: relative;
+    top: -55px;
+    font-size: 40px;
+    border: 10px solid  rgb(253, 247, 237);
+    background-color: rgb(253, 247, 237);
+}
+.hakkimda-bilgi{
+    background-color:  rgb(253, 247, 237);
+}
+ h3 {
+    margin-left: 70px;
+    margin-top: 50px;
+    color: rgb(84, 60, 17);
+}
+
+.hakkimda-icerik h5 {
+    margin-left: 30px;
+
+}
+
+.filmler {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+hr {
+    color:rgb(47, 72, 59);
+    size: 3px;
+}
+.kitap-foto{
+    border: none;
+    border-radius: 10%;
+    width: 100px;
+}
+.kitap-foto img{
+width: 100%;
+border-radius: 10%;
+}
+.kitap-foto img:hover{
+    opacity: .5;
+    }
+.row p {
+    display: inline-block;
+
+}
+
+.row img {
+    width: 300px;
+    height: 300px;
+    float: right;
+    margin-top: 0;
+}
+.d-block{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-wrapper{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.footer {
+    background-color:  rgb(47, 72, 59);
+    height: 200px;
+    color: rgb(253, 247, 237);
+  }
+  .footer p {
+    font-size: 18px;
+  }
+  .footer-sutun {
+    height: 200px;
+  }
