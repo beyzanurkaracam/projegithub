@@ -8,12 +8,12 @@
 </head>
 <body>
 <?php
-    echo "Hoşgeldiniz ";
-    if(isset($_POST["email"])&& $_POST["email"]!=""){
+    if($_POST["email"]!=""&& $_POST["password"]!=""&&$_POST["email"]=="g211210054@sakarya.edu.tr"&& $_POST["password"]=="g211210054"){
+        echo "Hoşgeldiniz ";
         echo $_POST["email"];
     }else{
         header('Location: login.html'); // login başarısızsa login sayfasına geri yönlendirme
         exit;
-    ?>
+    }?>
 </body>
 </html>
