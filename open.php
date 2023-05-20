@@ -9,8 +9,12 @@
 <body>
 <?php
     if($_POST["email"]!=""&& $_POST["password"]!=""&&$_POST["email"]=="g211210054@sakarya.edu.tr"&& $_POST["password"]=="g211210054"){
-        echo "Hoşgeldiniz ";
+        echo "Hoşgeldiniz ! <br>";
+        echo "Email: ";
         echo $_POST["email"];
+        echo "<br>";
+        echo "Şifre: ";
+        echo $_POST["password"];
     }else{
         header('Location: login.html'); // login başarısızsa login sayfasına geri yönlendirme
         exit;

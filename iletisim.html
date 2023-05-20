@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg ust-navbar ">
         <div class="container-fluid navbarr">
             <div class="logo">
-                <img src="b-harfi_1194522.png" alt="logo">
+                <img src="resimler/b-harfi_1194522.png" alt="logo">
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,80 +60,102 @@
             <h3 class="my-5">İletişime Geçin</h3>
             <div class="row" >
                 <div class="col-md-12 col-lg-6">
+                    <form id="contact-form" >
                     <div class="row">
                         <div class="col-6">
                             <div class="input-group">
                                 <div class="input-group-text rounded-0 bg border-0">
                                     <i class="fa-solid fa-person"></i>
                                 </div>
-                                <input type="text" class="form-control rounded-0 border textcolor bg-transparent"
-                                    placeholder="NAME*" required>
+                                <input type="text" id="firstName" class="form-control rounded-0 border textcolor bg-transparent"
+                                    placeholder="İSiM*" required>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="input-group">
                                 <div class="input-group-text rounded-0 bg border-0">
-                                    <i class="fa-solid fa-at"></i>
+                                    <i class="fa-solid fa-person"></i>
                                 </div>
-                                <input type="email" class="form-control rounded-0 border textcolor bg-transparent"
-                                    placeholder="EMAİL*" required>
+                                <input type="text" id="lastName" class="form-control rounded-0 border textcolor bg-transparent"
+                                    placeholder="SOYİSİM*" required>
                             </div>
 
                         </div>
                        <br> <br>
-                        
-                        <div class="col-12 py-5">
-                            <div class="input-group">
-                                <div class="input-group-text rounded-0 bg border-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <input type="tel" class="form-control rounded-0 border textcolor bg-transparent"
-                                    placeholder="tel" rows="5" required>
+                       <div class="col-6">
+                        <div class="input-group">
+                            <div class="input-group-text rounded-0 bg border-0">
+                                <i class="fa-solid fa-at"></i>
                             </div>
+                            <input type="email" id="email" class="form-control rounded-0 border textcolor bg-transparent"
+                                placeholder="EMAİL*" required>
                         </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group">
+                            <div class="input-group-text rounded-0 bg border-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <input type="TELEFON*" id="phone" class="form-control rounded-0 border textcolor bg-transparent"
+                                placeholder="tel" rows="5" required>
+                        </div>
+
+                    </div>
+                        
                         <div class="col-12 py-5">
                             <div class="input-group">
                                 <div class="input-group-text rounded-0 bg border-0">
                                     <i class="fa-solid fa-envelope"></i>
                                 </div>
-                                <textarea class="form-control rounded-0 border textcolor bg-transparent"
+                                <textarea id="
+                                message" class="form-control rounded-0 border textcolor bg-transparent"
                                     placeholder="MESSAGE" rows="5" required></textarea>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <div class="input-group">
-                               <p> Kadın <input type="radio" name="cinsiyet"></p>
-                               <p class="mx-3"> Erkek <input type="radio" name="cinsiyet"></p>
-                                
-                            </div>
-                           
-                            
-                        </div>
+                        
                         
                       
-                        <div class="col-6">
-                            <div class="input-group">
-                               <select>
-                                <option value="istanbul">İstanbul</option>
-                                <option value="ankara">Ankara</option>
-                                <option value="izmir">İzmir</option>
-                               </select>
-                                
-                            </div>
-                
-                            
-                        </div>
+                        
                         <div class="d-grid">
-                            <button class="btn btn-outline bg rounded-0 text-uppercase " type="submit">send
-                                message</button>
+                            <button class="btn btn-outline bg rounded-0 text-uppercase textclr " type="submit">mesajını gönder</button>
+                        </div>
+                        
+                        <div class="d-grid my-3">
+                            <button class="btn btn-outline bg rounded-0 text-uppercase textclr " type="reset">temizle</button>
                         </div>
                         
                     </div>
+                 </form>
+                    
                 </div>
                 
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+        document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contact-form');
+  
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var message = document.getElementById('message').value;
+    
+    if (firstName === '' || lastName === '' || email === '' || phone === '' || message === '') {
+      alert('Lütfen tüm alanları doldurunuz.');
+      return;
+    }
+    
+  });
+  resetButton.addEventListener('click', function() {
+    form.reset();
+});
+});      
+      
+    </script>
   </body>
 </html>
